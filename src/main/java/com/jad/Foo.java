@@ -1,5 +1,6 @@
 package com.jad;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Foo {
@@ -11,7 +12,9 @@ public class Foo {
 
     public Foo(Bar bar) {
         this.bar = bar;
+        this.bazs = new ArrayList<>();
         this.qux = new Qux();
+        this.graults = new ArrayList<>();
     }
 
     public Bar getBar() {
