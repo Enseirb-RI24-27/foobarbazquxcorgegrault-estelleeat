@@ -1,3 +1,5 @@
+package com.jad;
+
 import java.util.List;
 
 public class Foo {

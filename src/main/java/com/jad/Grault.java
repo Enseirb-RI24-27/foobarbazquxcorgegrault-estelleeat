@@ -1,3 +1,5 @@
+package com.jad;
+
 public class Grault {
     private Foo foo;
 

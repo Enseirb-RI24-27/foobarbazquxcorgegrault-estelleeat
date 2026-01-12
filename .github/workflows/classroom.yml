@@ -24,17 +24,17 @@ jobs:
           distribution: 'temurin'
           cache: maven
 
-      - name: Test Bar class
+      - name: Test com.jad.Bar class
         id: test-bar-class
         uses: classroom-resources/autograding-command-grader@v1
         with:
-          test-name: Test Bar class
+          test-name: Test com.jad.Bar class
           setup-command: ''
           command: mvn -B -q -fae test -Dtest=BarTest#classTest --file pom.xml
           timeout: 1
           max-score: 1
 
-      - name: Test Baz enum
+      - name: Test com.jad.Baz enum
         id: test-baz-class
         uses: classroom-resources/autograding-command-grader@v1
         with:
@@ -44,71 +44,71 @@ jobs:
           timeout: 1
           max-score: 1
 
-      - name: Test Qux class
+      - name: Test com.jad.Qux class
         id: test-qux-class
         uses: classroom-resources/autograding-command-grader@v1
         with:
-          test-name: Test Qux class
+          test-name: Test com.jad.Qux class
           setup-command: ''
           command: mvn -B -q -fae test -Dtest=QuxTest#classTest --file pom.xml
           timeout: 1
           max-score: 1
 
-      - name: Test Grault class
+      - name: Test com.jad.Grault class
         id: test-grault-class
         uses: classroom-resources/autograding-command-grader@v1
         with:
-          test-name: Test Grault class
+          test-name: Test com.jad.Grault class
           setup-command: ''
           command: mvn -B -q -fae test -Dtest=GraultTest#classTest --file pom.xml
           timeout: 1
           max-score: 2
 
-      - name: Test Corge class
+      - name: Test com.jad.Corge class
         id: test-corge-class
         uses: classroom-resources/autograding-command-grader@v1
         with:
-          test-name: Test Corge class
+          test-name: Test com.jad.Corge class
           setup-command: ''
           command: mvn -B -q -fae test -Dtest=CorgeTest#classTest --file pom.xml
           timeout: 1
           max-score: 2
 
-      - name: Test Foo class
+      - name: Test com.jad.Foo class
         id: test-foo-class
         uses: classroom-resources/autograding-command-grader@v1
         with:
-          test-name: Test Foo class
+          test-name: Test com.jad.Foo class
           setup-command: ''
           command: mvn -B -q -fae test -Dtest=FooTest#classTest --file pom.xml
           timeout: 1
           max-score: 2
 
-      - name: Test Corge relation
+      - name: Test com.jad.Corge relation
         id: test-corge-relation
         uses: classroom-resources/autograding-command-grader@v1
         with:
-          test-name: Test Corge relation
+          test-name: Test com.jad.Corge relation
           setup-command: ''
           command: mvn -B -q -fae test -Dtest=CorgeTest#relationsTest --file pom.xml
           timeout: 1
           max-score: 2
 
-      - name: Test Grault relation
+      - name: Test com.jad.Grault relation
         id: test-grault-relation
         uses: classroom-resources/autograding-command-grader@v1
         with:
-          test-name: Test Grault relation
+          test-name: Test com.jad.Grault relation
           setup-command: ''
           command: mvn -B -q -fae test -Dtest=GraultTest#relationsTest --file pom.xml
           timeout: 1
           max-score: 2
 
-      - name: Test Foo relation
+      - name: Test com.jad.Foo relation
         id: test-foo-relation
         uses: classroom-resources/autograding-command-grader@v1
         with:
-          test-name: Test Foo relation
+          test-name: Test com.jad.Foo relation
           setup-command: ''
           command: mvn -B -q -fae test -Dtest=FooTest#relationsTest --file pom.xml
           timeout: 1
