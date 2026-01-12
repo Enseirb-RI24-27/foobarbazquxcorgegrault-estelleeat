@@ -72,28 +72,28 @@ class FooTest {
 
     @Test
     void barAttributeTest() {
-        Utils.testIfPrivateAttributeExistsWithGoodType("com.jad.com.jad.Bar",
+        Utils.testIfPrivateAttributeExistsWithGoodType("com.jad.Bar",
                 "bar",
                 FooTest.fooClass);
     }
 
     @Test
     void bazsAttributeTest() {
-        Utils.testIfPrivateAttributeExistsWithGenericType("java.util.List<com.jad.com.jad.Baz>",
+        Utils.testIfPrivateAttributeExistsWithGenericType("java.util.List<com.jad.Baz>",
                 "bazs",
                 FooTest.fooClass);
     }
 
     @Test
     void quxAttributeTest() {
-        Utils.testIfPrivateAttributeExistsWithGoodType("com.jad.com.jad.Qux",
+        Utils.testIfPrivateAttributeExistsWithGoodType("com.jad.Qux",
                 "qux",
                 FooTest.fooClass);
     }
 
     @Test
     void graultsAttributeTest() {
-        Utils.testIfPrivateAttributeExistsWithGenericType("java.util.List<com.jad.com.jad.Grault>",
+        Utils.testIfPrivateAttributeExistsWithGenericType("java.util.List<com.jad.Grault>",
                 "graults",
                 FooTest.fooClass);
     }
@@ -163,7 +163,7 @@ class FooTest {
 
     @Test
     void addBazAndGetBazsTest() {
-        Class<?> bazClass = assertDoesNotThrow(() -> ClassLoader.getSystemClassLoader().loadClass("com.jad.com.jad.Baz"),
+        Class<?> bazClass = assertDoesNotThrow(() -> ClassLoader.getSystemClassLoader().loadClass("com.jad.Baz"),
                 "The class com.jad.Baz does not exist.");
         Method addBazMethod = assertDoesNotThrow(() -> FooTest.fooClass.getDeclaredMethod("addBaz", bazClass),
                 "The method 'addBaz' does not exist.");
@@ -192,7 +192,7 @@ class FooTest {
 
     @Test
     void getCorgeAndSetCorgeTest() {
-        Class<?> corgeClass = assertDoesNotThrow(() -> ClassLoader.getSystemClassLoader().loadClass("com.jad.com.jad.Corge"),
+        Class<?> corgeClass = assertDoesNotThrow(() -> ClassLoader.getSystemClassLoader().loadClass("com.jad.Corge"),
                 "The class com.jad.Corge does not exist.");
         Method getCorgeMethod = assertDoesNotThrow(() -> FooTest.fooClass.getDeclaredMethod("getCorge"),
                 "The method 'getCorge' does not exist.");
@@ -255,7 +255,7 @@ class FooTest {
                 "The method 'addGrault' does not exist.");
         Method getGraultsMethod = assertDoesNotThrow(() -> FooTest.fooClass.getDeclaredMethod("getGraults"),
                 "The method 'getGraults' does not exist.");
-        Method getFooMethod = assertDoesNotThrow(() -> ClassLoader.getSystemClassLoader().loadClass("com.jad.com.jad.Grault")
+        Method getFooMethod = assertDoesNotThrow(() -> ClassLoader.getSystemClassLoader().loadClass("com.jad.Grault")
                         .getDeclaredMethod("getFoo"),
                 "The method 'getFoo' does not exist in com.jad.Grault class.");
 

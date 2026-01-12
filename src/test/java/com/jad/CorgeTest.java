@@ -51,14 +51,14 @@ class CorgeTest {
 
     @Test
     void fooAttributeTest() {
-        Utils.testIfPrivateAttributeExistsWithGoodType("com.jad.com.jad.Foo", "foo", CorgeTest.corgeClass);
+        Utils.testIfPrivateAttributeExistsWithGoodType("com.jad.Foo", "foo", CorgeTest.corgeClass);
     }
 
     @Test
     void constructorTest() {
-        Class<?> barClass = assertDoesNotThrow(() -> ClassLoader.getSystemClassLoader().loadClass("com.jad.com.jad.Bar"),
+        Class<?> barClass = assertDoesNotThrow(() -> ClassLoader.getSystemClassLoader().loadClass("com.jad.Bar"),
                 "The class com.jad.Bar does not exist.");
-        Class<?> fooClass = assertDoesNotThrow(() -> ClassLoader.getSystemClassLoader().loadClass("com.jad.com.jad.Foo"),
+        Class<?> fooClass = assertDoesNotThrow(() -> ClassLoader.getSystemClassLoader().loadClass("com.jad.Foo"),
                 "The class com.jad.Foo does not exist.");
         Constructor<?> fooConstructor = assertDoesNotThrow(() -> fooClass.getDeclaredConstructor(barClass),
                 "The constructor of com.jad.Foo does not exist.");
@@ -81,9 +81,9 @@ class CorgeTest {
 
     @Test
     void getFooAndSetFooTest() {
-        Class<?> barClass = assertDoesNotThrow(() -> ClassLoader.getSystemClassLoader().loadClass("com.jad.com.jad.Bar"),
+        Class<?> barClass = assertDoesNotThrow(() -> ClassLoader.getSystemClassLoader().loadClass("com.jad.Bar"),
                 "The class com.jad.Bar does not exist.");
-        Class<?> fooClass = assertDoesNotThrow(() -> ClassLoader.getSystemClassLoader().loadClass("com.jad.com.jad.Foo"),
+        Class<?> fooClass = assertDoesNotThrow(() -> ClassLoader.getSystemClassLoader().loadClass("com.jad.Foo"),
                 "The class com.jad.Foo does not exist.");
         Method getFooMethod = assertDoesNotThrow(() -> CorgeTest.corgeClass.getDeclaredMethod("getFoo"),
                 "The method 'getFoo' does not exist.");
