@@ -11,6 +11,7 @@ public class Foo {
 
     public Foo(Bar bar) {
         this.bar = bar;
+        this.qux = new Qux();
     }
 
     public Bar getBar() {
@@ -42,8 +43,7 @@ public class Foo {
     }
 
     public void addGrault() {
-        //this.graults.add();
-
+        this.graults.add(new Grault(this));
     }
 
 }
