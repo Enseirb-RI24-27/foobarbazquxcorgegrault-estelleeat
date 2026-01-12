@@ -22,8 +22,8 @@ class FooTest {
 
     @BeforeAll
     static void beforeAll() {
-        FooTest.fooClass = Utils.testIfClassExists("com.jad.com.jad.Foo");
-        FooTest.barClass = assertDoesNotThrow(() -> ClassLoader.getSystemClassLoader().loadClass("com.jad.com.jad.Bar"),
+        FooTest.fooClass = Utils.testIfClassExists("com.jad.Foo");
+        FooTest.barClass = assertDoesNotThrow(() -> ClassLoader.getSystemClassLoader().loadClass("com.jad.Bar"),
                 "The class com.jad.Bar does not exist.");
         Constructor<?> constructor = assertDoesNotThrow(() -> FooTest.fooClass.getDeclaredConstructor(FooTest.barClass),
                 "The constructor of com.jad.Foo does not exist.");

@@ -20,7 +20,7 @@ class GraultTest {
 
     @BeforeAll
     static void beforeAll() {
-        GraultTest.graultClass = Utils.testIfClassExists("com.jad.com.jad.Grault");
+        GraultTest.graultClass = Utils.testIfClassExists("com.jad.Grault");
     }
 
     @Test

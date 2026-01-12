@@ -11,7 +11,7 @@ class BazTest {
 
     @BeforeAll
     static void beforeAll() {
-        BazTest.bazClass = Utils.testIfClassExists("com.jad.com.jad.Baz");
+        BazTest.bazClass = Utils.testIfClassExists("com.jad.Baz");
     }
 
     @Test

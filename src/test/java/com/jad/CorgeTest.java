@@ -17,7 +17,7 @@ class CorgeTest {
 
     @BeforeAll
     static void beforeAll() {
-        CorgeTest.corgeClass = Utils.testIfClassExists("com.jad.com.jad.Corge");
+        CorgeTest.corgeClass = Utils.testIfClassExists("com.jad.Corge");
     }
 
     @Test
